@@ -7,15 +7,17 @@ module.exports = {
   mode: "development",
   entry: './src/index.js',
   output: {
-    filename: 'bundle.js',
+    // filename: 'bundle.js',
     // filename: '[name]-[hash].js',
-    // filename: '[name]-[chunkhash].js',
+    filename: '[name]-[chunkhash].js',
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [new HtmlWebpackPlugin({
-    title: 'Custom template',
+    title: '02example template',
+    // filename: '[name].html',
+    // filename: "[hash].html",
+    // filename: "[chunkhash].html",
     filename: 'index.html',
-    // filename: 'admin.html',
     template: 'src/index.html'
   })],
 }
